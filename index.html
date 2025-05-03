@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Резюме студента</title>
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <h1 class="page__title">Резюме студента</h1>
+
+      <ul class="page__list list">
+        <li class="list-item">
+          <button class="item-btn">Образование</button>
+        </li>
+        <li class="list-item">
+          <button class="item-btn">Навыки</button>
+        </li>
+        <li class="list-item">
+          <button class="item-btn">Опыт</button>
+        </li>
+        <li class="list-item">
+          <button class="item-btn">Итоговое Резюме</button>
+        </li>
+      </ul>
+    </header>
+
+    <main class="page__main main">
+      <section
+        class="main__section main__section--active section main__section-education"
+      >
+        <h2 class="section__title">Образование</h2>
+        <form
+          action="#"
+          name="education"
+          method="post"
+          class="section__form section__form--name"
+        >
+          <label for="name">ФИО:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Введите Ваше ФИО"
+          />
+          <label for="city">Город:</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Введите город"
+          />
+          <label for="university">Университет:</label>
+          <input
+            type="text"
+            name="university"
+            id="university"
+            placeholder="Введите университет"
+          />
+        </form>
+      </section>
+      <section class="main__section section skills main__section-skills">
+        <h2 class="section__title">Навыки</h2>
+        <ul class="skills__list">
+          <li class="skills__item">
+            <button class="skills__btn">JavaScript</button>
+          </li>
+          <li class="skills__item">
+            <button class="skills__btn">HTML</button>
+          </li>
+          <li class="skills__item"><button class="skills__btn">CSS</button></li>
+          <li class="skills__item">
+            <button class="skills__btn">Python</button>
+          </li>
+          <li class="skills__item">
+            <button class="skills__btn">Java</button>
+          </li>
+          <li class="skills__item"><button class="skills__btn">C++</button></li>
+          <li class="skills__item">
+            <button class="skills__btn">React</button>
+          </li>
+          <li class="skills__item">
+            <button class="skills__btn">Node.js</button>
+          </li>
+          <li class="skills__item"><button class="skills__btn">SQL</button></li>
+          <li class="skills__item"><button class="skills__btn">Git</button></li>
+        </ul>
+        <p class="skills__count">Выбрано навыков:</p>
+        <p class="skills__num"></p>
+      </section>
+      <section class="main__section section main__section-experience">
+        <h2 class="section__title">Опыт</h2>
+        <form
+          action="#"
+          name="experience"
+          method="post"
+          class="section__form section__form--experience"
+        >
+          <label for="experience">Опыт работы:</label>
+          <textarea
+            type="text"
+            name="experience"
+            id="experience"
+            placeholder="Опишите Ваш опыт работы"
+            cols="60"
+            rows="8"
+          ></textarea>
+          <button
+            type="submit"
+            name="experience"
+            id="experience"
+            class="experience-btn"
+          >
+            Сохранить
+          </button>
+        </form>
+      </section>
+
+      <section class="main__section section main__section-result">
+        <div class="result__container">
+          <h2 class="section__title">Ваше Резюме</h2>
+          <p><span class="result__name"></span></p>
+          <p><b>Город:</b> <span class="result__city"></span></p>
+          <p><b>Университет:</b> <span class="result__university"></span></p>
+          <h3><b>Навыки</b>:</h3>
+          <ul class="result__skillsList"></ul>
+          <p><b>Опыт работы:</b> <span class="result__experience"></span></p>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
